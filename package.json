@@ -1,0 +1,17 @@
+{
+  "name": "myweb",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio",
+  "main": "index.js",
+  "homepage": "https://Amilcarmhula.github.io/MyWeb",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Amilcar Mula",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0"
+  }
+}

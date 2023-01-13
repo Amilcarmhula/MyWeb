@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Gabriola;
+    /* background-image: url('/images/logo/LogoSite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;*/
+}
+
+.logotipo img {
+    height: 95px;
+    width: 142px;
+}
+
+.navbar .logotipo strong {
+    float: right;
+    font-size: 30pt;
+    margin-top: 15px;
+    margin-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .item ul {
+    display: flex;
+    gap: 5px;
+}
+
+.navbar .item .links li a {
+    color: black;
+    font-size: 18pt;
+    margin: 5px;
+
+}
+
+._menu {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    float: right;
+}
+
+._menu span {
+    width: 30px;
+    height: 5px;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.navbar .item ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .item ul li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: all 1;
+
+}
+
+.check {
+    display: none;
+}
+
+.check:checked~.item ul {
+    left: 0;
+    transition: all 0.5s;
+}
+
+@media only screen and (min-width:720px) {
+    ._menu {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width:685px) {
+    .navbar .item ul {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    ._menu {
+        visibility: hidden;
+    }
+
+    .navbar .item ul li a {
+        font-size: 26pt;
+    }
+}
+
+@media only screen and (max-width:723px) {
+    .navbar .item ul {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100%;
+    }
+
+    ._menu {
+        visibility: hidden;
+    }
+
+    .navbar .item ul li a {
+        font-size: 18pt;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .navbar .item ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: -100%;
+        transition: all 0.5s;
+
+        top: 17.5%;
+        width: 100%;
+        height: 100%;
+        gap: 5px;
+    }
+
+    ._menu {
+        visibility: visible;
+    }
+
+    .navbar .item ul li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .item ul li a {
+        font-size: 14pt;
+    }
+
+    .navbar .logotipo strong {
+        display: none;
+    }
+}
